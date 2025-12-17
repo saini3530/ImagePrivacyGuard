@@ -841,13 +841,28 @@
 
             selectAllSensitive() {
                 const checkboxes = document.querySelectorAll('.metadata-checkbox');
+                let selectedCount = 0;
                 checkboxes.forEach(checkbox => {
                     const key = checkbox.getAttribute('data-key');
                     // Only check sensitive fields that are not disabled
                     if (this.sensitiveFields.has(key) && !checkbox.disabled) {
                         checkbox.checked = true;
+                        selectedCount++;
                     }
                 });
+                
+                // Provide visual feedback
+                if (selectedCount > 0) {
+                    const button = document.getElementById('selectAllBtn');
+                    const originalText = button.textContent;
+                    button.textContent = `✓ Selected ${selectedCount} Sensitive Field${selectedCount !== 1 ? 's' : ''}`;
+                    button.style.backgroundColor = '#28a745';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 2000);
+                }
             }
 
             removeSelectedMetadata() {
