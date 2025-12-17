@@ -1,0 +1,15 @@
+# Test files
+test_image.jpg
+test_*.jpg
+*.test.jpg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
