@@ -151,6 +151,14 @@
             border-color: #ffcccc;
         }
 
+        .metadata-item.clickable {
+            cursor: pointer;
+        }
+
+        .metadata-item.disabled {
+            opacity: 0.6;
+        }
+
         .metadata-label {
             display: flex;
             align-items: center;
@@ -178,6 +186,11 @@
             width: 20px;
             height: 20px;
             cursor: pointer;
+        }
+
+        .metadata-checkbox:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
         }
 
         .button-group {
@@ -742,10 +755,20 @@
                 const metadataList = document.getElementById('metadataList');
                 metadataList.innerHTML = '';
 
+                // Define non-removable fields (basic file properties)
+                const nonRemovableFields = new Set(['File Name', 'File Size', 'File Type', 'Last Modified']);
+
                 Object.entries(this.metadata).forEach(([key, value]) => {
                     const isSensitive = this.sensitiveFields.has(key);
+                    const isNonRemovable = nonRemovableFields.has(key);
                     const item = document.createElement('div');
-                    item.className = `metadata-item ${isSensitive ? 'sensitive' : ''}`;
+                    
+                    // Build class list
+                    const classes = ['metadata-item'];
+                    if (isSensitive) classes.push('sensitive');
+                    if (isNonRemovable) classes.push('disabled');
+                    else classes.push('clickable');
+                    item.className = classes.join(' ');
                     
                     const displayValue = this.formatValue(value);
                     
@@ -778,8 +801,23 @@
                     checkbox.type = 'checkbox';
                     checkbox.className = 'metadata-checkbox';
                     checkbox.setAttribute('data-key', key);
-                    if (isSensitive) {
-                        checkbox.checked = true;
+                    
+                    // Disable checkbox for non-removable fields
+                    if (isNonRemovable) {
+                        checkbox.disabled = true;
+                        checkbox.title = 'This field cannot be removed (basic file property)';
+                    } else {
+                        if (isSensitive) {
+                            checkbox.checked = true;
+                        }
+                        
+                        // Add click event to the row to toggle checkbox
+                        item.addEventListener('click', (e) => {
+                            // Don't toggle if clicking directly on the checkbox
+                            if (e.target !== checkbox) {
+                                checkbox.checked = !checkbox.checked;
+                            }
+                        });
                     }
                     
                     item.appendChild(labelDiv);
@@ -805,7 +843,8 @@
                 const checkboxes = document.querySelectorAll('.metadata-checkbox');
                 checkboxes.forEach(checkbox => {
                     const key = checkbox.getAttribute('data-key');
-                    if (this.sensitiveFields.has(key)) {
+                    // Only check sensitive fields that are not disabled
+                    if (this.sensitiveFields.has(key) && !checkbox.disabled) {
                         checkbox.checked = true;
                     }
                 });
